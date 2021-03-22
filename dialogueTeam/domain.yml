@@ -5,23 +5,24 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
   - bot_challenge
+  - directions
+  - cdtTrivia
+
+entities:
+  - destination
+  - name
+  - subject
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey! what do you want?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_over_there:
+  - text: "GIVE_DIRECTION"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_cdt:
+  - text: "CDT_TRIVIA"
 
   utter_goodbye:
   - text: "Bye"

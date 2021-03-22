@@ -50,39 +50,25 @@ nlu:
     - no way
     - not really
 
-- intent: mood_great
+- intent: directions
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - Can you lead me to the [toilet](destination)
+    - Can you lead me to the [office](destination)
+    - Can you show me where the [toilet](destination) is
+    - do you know where the [toilet](destination) is
+    - can you point me to the [toilet](destination)
+    - where is the toilet
 
-- intent: mood_unhappy
+- intent: cdtTrivia
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - Can you tell me about the cdt 
+    - What's the cdt all about
+    - What does the cdt do?
+    - can you tell me about [gordon](name)
+    - can you tell me about [serena](name)
+    - can you tell me about [psychology](subject)
+    - can you tell me about [computer science](subject)
+    - can you tell me about [maths](subject)
 
 - intent: bot_challenge
   examples: |
