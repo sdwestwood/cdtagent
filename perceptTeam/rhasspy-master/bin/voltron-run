@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+# Directory of *this* script
+this_dir="$( cd "$( dirname "$0" )" && pwd )"
+src_dir="$(realpath "${this_dir}/..")"
+
+if [[ -z "${RHASSPY_BASE_DIR}" ]]; then
+    export RHASSPY_BASE_DIR="${src_dir}"
+fi
+
+# -----------------------------------------------------------------------------
+# Set up environment
+# -----------------------------------------------------------------------------
+
+venv="${src_dir}/.venv"
+
+if [[ -d "${venv}" ]]; then
+    echo "Using virtual environment at ${venv}"
+    source "${venv}/bin/activate"
+
+    # Use bin/lib from virtual environment
+    export PATH="${venv}/bin:${PATH}"
+    export LD_LIBRARY_PATH="${venv}/lib:${LD_LIBRARY_PATH}"
+
+    maybe_kaldi_dir="${venv}/lib/kaldi"
+    if [[ -d "${maybe_kaldi_dir}" ]]; then
+        export KALDI_DIR="${maybe_kaldi_dir}"
+    fi
+fi
+
+# Add submodules to Python path
+if [[ -f "${RHASSPY_BASE_DIR}/RHASSPY_DIRS" ]]; then
+    RHASSPY_DIRS=(`cat "${RHASSPY_BASE_DIR}/RHASSPY_DIRS"`)
+    for rhasspy_dir in "${RHASSPY_DIRS[@]}"; do
+        module_dir="${RHASSPY_BASE_DIR}/${rhasspy_dir}"
+        PYTHONPATH="${module_dir}:${PYTHONPATH}"
+
+        bin_dir="${module_dir}/bin"
+        if [[ -d "${bin_dir}" ]]; then
+            export PATH="${bin_dir}:${PATH}"
+        fi
+    done
+
+    export PYTHONPATH="${RHASSPY_BASE_DIR}:${PYTHONPATH}"
+fi
+
+# Run user command
+exec "$@"
