@@ -47,6 +47,7 @@ parser.add_argument(
     '-r', '--samplerate', type=int, help='sampling rate')
 args = parser.parse_args(remaining)
 
+
 try:
     if args.model is None:
         args.model = "model"
@@ -73,10 +74,12 @@ try:
             print('#' * 80)
 
             rec = vosk.KaldiRecognizer(model, args.samplerate)
+            # while not rec.AcceptWaveform(data):
+            # try restructuring as a function that runs and then resets
             while True:
                 data = q.get()
                 if rec.AcceptWaveform(data):
-                    print(rec.Result())
+                    print(rec.Result())           
                 else:
                     print(rec.PartialResult())
                 if dump_fn is not None:
