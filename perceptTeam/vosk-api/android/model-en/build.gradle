@@ -1,0 +1,27 @@
+def archiveName = "vosk-model-en"
+def pomName = "Vosk English Model"
+def pomDescription = "Small English model for Android"
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 6
+        versionName = version
+        archivesBaseName = archiveName
+    }
+}
+
+publishing {
+    publications {
+        aar(MavenPublication) {
+            artifactId = archiveName
+            artifact("$buildDir/outputs/aar/$archiveName-release.aar")
+            pom {
+                name = pomName
+                description = pomDescription
+            }
+        }
+    }
+}
