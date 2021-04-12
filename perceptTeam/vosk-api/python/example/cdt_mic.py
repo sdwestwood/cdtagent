@@ -21,6 +21,12 @@ def callback(indata, frames, time, status):
     if status:
         print(status, file=sys.stderr)
     q.put(bytes(indata))
+    
+def getChunk(fulltxt):
+    """Function to return the isolated chunk of text from rec.Result()"""
+    result, text = fulltxt.split(']')
+    chunk = text[14:-3]
+    return chunk
 
 parser = argparse.ArgumentParser(add_help=False)
 parser.add_argument(
@@ -76,10 +82,14 @@ try:
             rec = vosk.KaldiRecognizer(model, args.samplerate)
             # while not rec.AcceptWaveform(data):
             # try restructuring as a function that runs and then resets
+            
+            chunks = [];
             while True:
                 data = q.get()
                 if rec.AcceptWaveform(data):
                     test = rec.Result()
+                    tmp_chunk = getChunk(test)
+                    chunks.append(tmp_chunk)
                     print(test)                  
                 else:
                     print(rec.PartialResult())
