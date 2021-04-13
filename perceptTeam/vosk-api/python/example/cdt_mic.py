@@ -31,7 +31,7 @@ def getChunk(fulltxt):
 
 def getConf(fulltxt):
     conf_idx = [a.end() for a in re.finditer('f" : ', fulltxt)]
-    conf = [fulltxt[i:(i+6)] for i in conf_idx]
+    conf = [fulltxt[i:(i+8)] for i in conf_idx]
     return conf
 
 parser = argparse.ArgumentParser(add_help=False)
@@ -102,9 +102,6 @@ try:
                     conf.append(tmp_conf)
 
                     print(fulltxt)         
-
-                    print(fulltxt)     
-
                     
                 else:
                     print(rec.PartialResult())
