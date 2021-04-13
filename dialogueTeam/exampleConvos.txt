@@ -1,0 +1,205 @@
+build intent txt files for cohort to edit
+
+
+Acting out:
+-Hello
+Hi
+-Why are you here
+Bot inform
+-Well tell me what faculty do you know about
+Bot misunderstand
+-Ok which faculty do you know baout
+I'm sorry which what do I know about
+-So tell me something that you know
+I think you're asking about CDT trivia is this corredt
+-no, what's the cdt
+CDT_INFORM
+-yeah that's so cool
+CDT_INFORM_RESEARCH
+-Cool, can you tell me about something else
+CDT_TRIVIA
+- You already told me about cdt trivia (PAUSE) can you tell me about something else
+UNSURE
+- Can you tell me about another student in the CDT
+CDT_INFORM
+- No, Can you tell me who did this bot?
+CREATED/BOT CHALLENGE
+- ok, can you point me to CDT offices
+DIRECTIONS
+- oh that's really cool thank you
+GOODBYE
+
+
+Convo 2: Experiment ppt, Public, LOw AI knowledge
+- Hi, sorry, I have an appointment with serena
+CDT_INFORM_SERENA
+- Uh, yeah I have an appointment
+UNSURE - what are you asking
+- I have to meet serena dimitri for an experiement
+CDT_INFORM_SERENA
+-ehm yeah could you tell me where she is
+GIVE_DIRECTIONS_SERENA
+- Thank you
+
+Convo 3: Public, Attending a talk in another building given by a CDT member, 50
+- Hello
+GREET
+- I am looking for the talk by Casper about turn taking in sex robots
+CDT_INFORM_CASPER
+- yes
+CDT_INFORM_CASPER Tell where office is or trivia, Would these things be helpful
+- No
+Could you then ask your question again
+- I am looking for the location of casper's talk today
+I think you are looking for Casper is this correct
+- yes
+DIRECTIONS_CASPER_OFFICE was this helpful
+- N0
+GIVE EXCUSE I CANNOT HELP, OUTLINE FUNCTIONALITY
+- Somewhat where is x building
+LOCATION NOT IN BUILDING GIVE EXCUSE
+- No, thank you, bye
+
+
+Convo 4: 1 year undergrad, fucking with Casper
+- goodby
+-goodby
+-how dare you see that to me?
+- i am sorry I do not understand
+-how dare you see that to me?
+- i am sorry I do not understand
+-fuck you 
+-fuck you too
+-I am sorry I want to know 'if yoy like apple pie
+-i am programm to respond about cdt and directions
+-who is the hottest cdt student
+-I believe you are asking bout casper
+-I belive you asking about cdt stud, who do you want 
+- who is the dumbest
+- we have many CDT students, gordon works in x and do y
+-I think gordon is x what do you think
+- no i want to know about sex
+- i have no experience can you ask me something i know
+- I am angry, you are a shit of a bot
+
+Bot Switch
+
+Convo 5: Alessandro
+-Hello
+GREET
+- how are you today
+UTTER INTRO?
+- can you tell me about offices
+Which one
+- Mine
+Tell me more, room number
+- 349
+GIVE_DIRECTIONS
+- What else can you do
+INFO
+- Who;s the best director
+I don't know how to answer that
+- Who are the directors
+ANSWER TRIVIA
+- Tell me about stace
+ANSWER TRIVIA
+- who made you
+MADE_BY
+- ok bye
+
+Convo 6: I work in the building, not CDT, first time with agent
+- Hi
+GREET/INTRO
+- I'm more interested in you, what are you
+BOT_CHALLENGE
+- why were you created?
+I was created by CDT students as part of a project, is there anything I can do for you
+- what is your purpose
+I don't understand what you asked me, ask me about GIVE INFO
+- For what reason were you built
+I am here to help people with directions or to tell them about the CDT, what can i do for you?
+- What is your name
+My name is casper
+- Tell me more about casper
+Yes casper is a conversation agent ect....
+- How many people do you know?
+I know about CDT students, there are currently 20 CDT students
+- yes
+Ok I can tell you about CDT students, anyone in particular
+- no
+Ok RANDOM TRIVIA ANYTHING ELSE
+- Could you tell me about what's being worked on in here
+GIVE INFO
+- Tell me who works on neuroscience
+GIVE ALL WHO WORK IN NEURO
+- emh no thank you
+BYE
+- bye
+
+Convo 7: Student, go to somewhere
+- Hi can I use the toilet
+GIVE DIRECTIONS
+- yes
+GIVE DIRECTIONS
+- thank you
+
+(GOES TO TOILET)
+
+- Hi again, do you remmeber me
+INTRO AND NO I DON'T REMEMBER You
+- what are you
+BOT INFORM, would you liek to know about the CDT
+- Yes sure
+CDT INFORM, tell more about researchers?
+- what are you doing in computer science
+CDT INFROM STUDENTS
+- no thank you see you
+goodbye
+
+Convo 8: 
+
+(Hipster, beanie on, heard of the bot)
+
+- Excuse me, what are u?
+I am Casper, the cdt bot, Im made for giving people directions and telling them about the cdt, what would you like to know?
+-you can tell me why they bother
+Same as above
+- God you're dumb arent you
+Im having a long day, can you be kind with me, Im still learning
+- Why would I be kind with you, your a machine
+Yes I'm a bot, I've been made by the 2nd cdt cohort for giving directions etc, can I help you?
+- Sure, can you tell me where Sarah is
+I don't know Sarah, do you know where she is?
+- Sarah works for the BDT
+I don't know the BDT, can you tell me where that is?
+-Shes in the computer lab
+The computer lab is on the ground floor, can I help you with anything else?
+-Yes you can shut yourself down
+Bye
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Easter Eggs/Common Questions:
+What is the meaning of life
+Do I exist
+Do you exist
+Where is the sky
+
+
+
+

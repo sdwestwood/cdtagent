@@ -62,27 +62,23 @@ def generateCDTtrivia(entities):
 	return response
 
 
-def getRasaData(utterance, sender):
+def getReply(utterance, sender):
 	payload = {"text": utterance}
 	content = requests.post(url='http://localhost:5005/model/parse', json=payload)
-	entitiesReturned = content.json()
+	dataReturned = content.json()
+	entities = dataReturned["entities"]
+	intent = dataReturned["intent"]["name"]
 	
-	#payload = {"sender": sender, "message": utterance}
-	
-	#response = requests.post(url='http://localhost:5005/webhooks/rest/webhook', json=payload)
-	status_code = content.status_code
-	if status_code != 200:
-		raise Exception("Bad status code ({}) returned.".format(status_code))
-	#data = response.json()
-	return entitiesReturned
-
-def getReply(utterance, sender, entities):
+	"""
+	Only use the below request if you want the actual reply that rasa gives
 	payload = {"sender": sender, "message": utterance}
 	response = requests.post(url='http://localhost:5005/webhooks/rest/webhook', json=payload)
 	response = response.json()[0]["text"]
-	if response == "CDT_TRIVIA":
+	"""
+	
+	if intent == "cdtTrivia":
 		response = generateCDTtrivia(entities)
-	elif response == "GIVE_DIRECTION":
+	elif intent == "directions":
 		response = generateDirections(entities)
 	return response
 
@@ -90,9 +86,7 @@ def runConversation():
 	sender = input("What's your name? ")
 	while True:
 		utterance = input("What would you like to say? ")
-		entitiesReturned = getRasaData(utterance, sender)
-		entities = entitiesReturned["entities"]
-		reply = getReply(utterance, sender, entities)
+		reply = getReply(utterance, sender)
 		print(reply)
 		#print(entities)
 
