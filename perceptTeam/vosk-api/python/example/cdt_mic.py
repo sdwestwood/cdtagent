@@ -6,6 +6,7 @@ import queue
 import sounddevice as sd
 import vosk
 import sys
+import re
 
 q = queue.Queue()
 
@@ -27,6 +28,11 @@ def getChunk(fulltxt):
     result, text = fulltxt.split(']')
     chunk = text[14:-3]
     return chunk
+
+def getConf(fulltxt):
+    conf_idx = [a.end() for a in re.finditer('f" : ', fulltxt)]
+    conf = [fulltxt[i:(i+6)] for i in conf_idx]
+    return conf
 
 parser = argparse.ArgumentParser(add_help=False)
 parser.add_argument(
@@ -80,24 +86,28 @@ try:
             print('#' * 80)
 
             rec = vosk.KaldiRecognizer(model, args.samplerate)
-            # while not rec.AcceptWaveform(data):
-            # try restructuring as a function that runs and then resets
             
             chunks = [];
+            conf = [];
             while True:
                 data = q.get()
                 if rec.AcceptWaveform(data):
-                    test = rec.Result()
-                    tmp_chunk = getChunk(test)
+                    
+                    fulltxt = rec.Result()
+                    tmp_chunk = getChunk(fulltxt)
+                    tmp_conf = getConf(fulltxt)
+                    tmp_dict = {tmp_chunk: tmp_conf}
+                    
                     chunks.append(tmp_chunk)
-                    print(test)                  
+                    conf.append(tmp_conf)
+                    print(fulltxt)         
+                    
                 else:
                     print(rec.PartialResult())
                 if dump_fn is not None:
                     dump_fn.write(data)
                     
-        
-
+    
 except KeyboardInterrupt:
     print('\nDone')
     parser.exit(0)
