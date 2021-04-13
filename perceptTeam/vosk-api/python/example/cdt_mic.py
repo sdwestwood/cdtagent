@@ -100,7 +100,11 @@ try:
                     
                     chunks.append(tmp_chunk)
                     conf.append(tmp_conf)
+
                     print(fulltxt)         
+
+                    print(fulltxt)     
+
                     
                 else:
                     print(rec.PartialResult())
