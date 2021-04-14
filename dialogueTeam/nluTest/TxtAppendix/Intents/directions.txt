@@ -1,0 +1,62 @@
+can you lead me to the [](destination)
+can you show me where the [](destination) is
+do you know where the [](destination) is
+can you point me to the [](destination)
+where is the [](destination)
+tell me where [](destination) is
+how do I find the [](destination)
+where can I find the [](destination)
+can you help me find [](destination)
+do you know where is [](name) office
+can you lead me to [](name) office
+can you show me where [](name) office is
+do you know where [](name) office is
+can you point me to [](name) office
+where is [](name)office
+tell me where [](name) office is
+how do I find [](name) office
+where can I find [](name)office
+can you help me find [](name) office
+do you know where is Mr [](name) office
+can you lead me to Mr [](name) office
+can you show me where Mr [](name) office is
+do you know where Mr [](name) office is
+can you point me to Mr [](name) office
+where is Mr [](name)office
+tell me where Mr [](name) office is
+how do I find Mr [](name) office
+where can I find Mr [](name)office
+can you help me find Mr [](name) office
+do you know where is Mss [](name) office
+can you lead me to Mss [](name) office
+can you show me where Mss [](name) office is
+do you know where Mss [](name) office is
+can you point me to Mss [](name) office
+where is Mss [](name)office
+tell me where Mss [](name) office is
+how do I find Mss [](name) office
+where can I find Mss [](name)office
+can you help me find Mss [](name) office
+do you know where is Mrs [](name) office
+can you lead me to Mrs[](name) office
+can you show me where Mrs [](name) office is
+do you know where Mrs [](name) office is
+can you point me to Mrs [](name) office
+where is Mrs [](name)office
+tell me where Mrs [](name) office is
+how do I find Mrs [](name) office
+where can I find Mrs [](name)office
+can you help me find Mrs [](name) office
+do you know where is Dr [](name) office
+can you lead me to Dr [](name) office
+can you show me where Dr [](name) office is
+do you know where Dr [](name) office is
+can you point me to Dr [](name) office
+where is Dr [](name)office
+tell me where Dr [](name) office is
+how do I find Dr [](name) office
+where can I find Dr [](name)office
+can you help me find Dr [](name) office
+[Birladeanu]
+[Emily]
+[O'Hara]

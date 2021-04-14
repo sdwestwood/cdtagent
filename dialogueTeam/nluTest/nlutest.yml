@@ -1,0 +1,1300 @@
+version: "2.0"
+
+nlu:
+- intent: affirm
+  examples: |
+    - Yes
+    - Y
+    - Yep
+    - Perfect
+    - Indeed
+    - Of course
+    - Correct
+    - Sounds good
+    - Nice
+    - Right
+    - Amazing
+    - Why not
+
+- intent: botChallenge
+  examples: |
+    - Are you a bot
+    - what are you
+    - who made you
+    - why are you here
+    - what can you do
+    - are you human
+    - who am I talking with
+    - what can you do for me
+    - are you programmed
+    - do you have a mind
+
+- intent: cdtTrivia
+  examples: |
+    - What do you do here
+    - What do you research
+    - Can you tell me about the [UKRI](organization)
+    - Can you tell me about the [UK research and innovation](organization)
+    - Can you tell me about the [CDT](organization)
+    - Can you tell me about the [Center for doctoral training](organization)
+    - Can you tell me about the [Social CDT](organization)
+    - Can you tell me about the [Social PhD](organization)
+    - What the [UKRI](organization) does
+    - What the [UK research and innovation](organization) does
+    - What the [CDT](organization) does
+    - What the [Center for doctoral training](organization) does
+    - What the [Social CDT](organization) does
+    - What the [Social PhD](organization) does
+    - Whats the [UKRI](organization) is about
+    - Whats the [UK research and innovation](organization) is about
+    - Whats the [CDT](organization) is about
+    - Whats the [Center for doctoral training](organization) is about
+    - Whats the [Social CDT](organization) is about
+    - Whats the [Social PhD](organization) is about
+    - what does the [UKRI](organization) do
+    - what does the [UK research and innovation](organization) do
+    - what does the [CDT](organization) do
+    - what does the [Center for doctoral training](organization) do
+    - what does the [Social CDT](organization) do
+    - what does the [Social PhD](organization) do
+    - Can you tell me about [Robin Bretin](student)
+    - Can you tell me about [Gordon Rennie](student)
+    - Can you tell me about [Andreas Drakopoulos](student)
+    - Can you tell me about [Serena Dimitri](student)
+    - Can you tell me about [Sean Westwood](student)
+    - Can you tell me about [Morgan Bailey](student)
+    - Can you tell me about [Radu Chirila](student)
+    - Can you tell me about [Jacqueline Borgstedt](student)
+    - Can you tell me about [Tobias Thejll-Madsen](student)
+    - Can you tell me about [Maria Vlachou](student)
+    - Can you tell me about [Casper Hyllested](student)
+    - Can you tell me about [Thomas Goodge](student)
+    - Can you tell me about [Christopher Chandler](student)
+    - Can you tell me about [Mary Roth](student)
+    - Can you tell me about [Rhiannon Fyfe](student)
+    - Can you tell me about [Emily O'Hara](student)
+    - Can you tell me about [Andrei Birladeanu](student)
+    - Can you tell me about [Robin Bretin](student) research
+    - Can you tell me about [Gordon Rennie](student) research
+    - Can you tell me about [Andreas Drakopoulos](student) research
+    - Can you tell me about [Serena Dimitri](student) research
+    - Can you tell me about [Sean Westwood](student) research
+    - Can you tell me about [Morgan Bailey](student) research
+    - Can you tell me about [Radu Chirila](student) research
+    - Can you tell me about [Jacqueline Borgstedt](student) research
+    - Can you tell me about [Tobias Thejll-Madsen](student) research
+    - Can you tell me about [Maria Vlachou](student) research
+    - Can you tell me about [Casper Hyllested](student) research
+    - Can you tell me about [Thomas Goodge](student) research
+    - Can you tell me about [Christopher Chandler](student) research
+    - Can you tell me about [Mary Roth](student) research
+    - Can you tell me about [Rhiannon Fyfe](student) research
+    - Can you tell me about [Emily O'Hara](student) research
+    - Can you tell me about [Andrei Birladeanu](student) research
+    - What is [Robin Bretin](student) investigating
+    - What is [Gordon Rennie](student) investigating
+    - What is [Andreas Drakopoulos](student) investigating
+    - What is [Serena Dimitri](student) investigating
+    - What is [Sean Westwood](student) investigating
+    - What is [Morgan Bailey](student) investigating
+    - What is [Radu Chirila](student) investigating
+    - What is [Jacqueline Borgstedt](student) investigating
+    - What is [Tobias Thejll-Madsen](student) investigating
+    - What is [Maria Vlachou](student) investigating
+    - What is [Casper Hyllested](student) investigating
+    - What is [Thomas Goodge](student) investigating
+    - What is [Christopher Chandler](student) investigating
+    - What is [Mary Roth](student) investigating
+    - What is [Rhiannon Fyfe](student) investigating
+    - What is [Emily O'Hara](student) investigating
+    - What is [Andrei Birladeanu](student) investigating
+    - Who is working on [PhD](interest)
+    - Who is working on [Robotics](interest)
+    - Who is working on [Neuroscience](interest)
+    - Who is working on [Psychology](interest)
+    - Who is working on [AI](interest)
+    - Who is working on [Artifical intelligence](interest)
+    - Who is working on [Ethics](interest)
+    - Who is working on [Cars](interest)
+    - Who is working on [Technology](interest)
+    - Who is working on [Programming](interest)
+    - Who is working on [VR](interest)
+    - Who is working on [Emotions](interest)
+    - Do you have any research on [PhD](interest)
+    - Do you have any research on [Robotics](interest)
+    - Do you have any research on [Neuroscience](interest)
+    - Do you have any research on [Psychology](interest)
+    - Do you have any research on [AI](interest)
+    - Do you have any research on [Artifical intelligence](interest)
+    - Do you have any research on [Ethics](interest)
+    - Do you have any research on [Cars](interest)
+    - Do you have any research on [Technology](interest)
+    - Do you have any research on [Programming](interest)
+    - Do you have any research on [VR](interest)
+    - Do you have any research on [Emotions](interest)
+    - Do you research [PhD](interest)
+    - Do you research [Robotics](interest)
+    - Do you research [Neuroscience](interest)
+    - Do you research [Psychology](interest)
+    - Do you research [AI](interest)
+    - Do you research [Artifical intelligence](interest)
+    - Do you research [Ethics](interest)
+    - Do you research [Cars](interest)
+    - Do you research [Technology](interest)
+    - Do you research [Programming](interest)
+    - Do you research [VR](interest)
+    - Do you research [Emotions](interest)
+    - Can you tell me about [PhD](interest)    - Can you tell me about [Robotics](interest)    - Can you tell me about [Neuroscience](interest)    - Can you tell me about [Psychology](interest)    - Can you tell me about [AI](interest)    - Can you tell me about [Artifical intelligence](interest)    - Can you tell me about [Ethics](interest)    - Can you tell me about [Cars](interest)    - Can you tell me about [Technology](interest)    - Can you tell me about [Programming](interest)    - Can you tell me about [VR](interest)    - Can you tell me about [Emotions](interest)
+
+- intent: deny
+  examples: |
+    - N
+    - No
+    - Nope
+    - Never
+    - No thanks
+    - I dont think so
+    - Dont like that
+    - Thats not for me
+    - No way
+    - Not really
+    - No thanks
+    - nah
+
+
+- intent: directions
+  examples: |
+    - can you lead me to the [toilet](destination)
+    - can you lead me to the [loo](destination)
+    - can you lead me to the [bathroom](destination)
+    - can you lead me to the [office](destination)
+    - can you lead me to the [lab](destination)
+    - can you lead me to the [reception](destination)
+    - can you lead me to the [hall](destination)
+    - can you lead me to the [help desk](destination)
+    - can you lead me to the [stairs](destination)
+    - can you lead me to the [lift](destination)
+    - can you show me where the [toilet](destination) is
+    - can you show me where the [loo](destination) is
+    - can you show me where the [bathroom](destination) is
+    - can you show me where the [office](destination) is
+    - can you show me where the [lab](destination) is
+    - can you show me where the [reception](destination) is
+    - can you show me where the [hall](destination) is
+    - can you show me where the [help desk](destination) is
+    - can you show me where the [stairs](destination) is
+    - can you show me where the [lift](destination) is
+    - do you know where the [toilet](destination) is
+    - do you know where the [loo](destination) is
+    - do you know where the [bathroom](destination) is
+    - do you know where the [office](destination) is
+    - do you know where the [lab](destination) is
+    - do you know where the [reception](destination) is
+    - do you know where the [hall](destination) is
+    - do you know where the [help desk](destination) is
+    - do you know where the [stairs](destination) is
+    - do you know where the [lift](destination) is
+    - can you point me to the [toilet](destination)
+    - can you point me to the [loo](destination)
+    - can you point me to the [bathroom](destination)
+    - can you point me to the [office](destination)
+    - can you point me to the [lab](destination)
+    - can you point me to the [reception](destination)
+    - can you point me to the [hall](destination)
+    - can you point me to the [help desk](destination)
+    - can you point me to the [stairs](destination)
+    - can you point me to the [lift](destination)
+    - where is the [toilet](destination)
+    - where is the [loo](destination)
+    - where is the [bathroom](destination)
+    - where is the [office](destination)
+    - where is the [lab](destination)
+    - where is the [reception](destination)
+    - where is the [hall](destination)
+    - where is the [help desk](destination)
+    - where is the [stairs](destination)
+    - where is the [lift](destination)
+    - tell me where [toilet](destination) is
+    - tell me where [loo](destination) is
+    - tell me where [bathroom](destination) is
+    - tell me where [office](destination) is
+    - tell me where [lab](destination) is
+    - tell me where [reception](destination) is
+    - tell me where [hall](destination) is
+    - tell me where [help desk](destination) is
+    - tell me where [stairs](destination) is
+    - tell me where [lift](destination) is
+    - how do I find the [toilet](destination)
+    - how do I find the [loo](destination)
+    - how do I find the [bathroom](destination)
+    - how do I find the [office](destination)
+    - how do I find the [lab](destination)
+    - how do I find the [reception](destination)
+    - how do I find the [hall](destination)
+    - how do I find the [help desk](destination)
+    - how do I find the [stairs](destination)
+    - how do I find the [lift](destination)
+    - where can I find the [toilet](destination)
+    - where can I find the [loo](destination)
+    - where can I find the [bathroom](destination)
+    - where can I find the [office](destination)
+    - where can I find the [lab](destination)
+    - where can I find the [reception](destination)
+    - where can I find the [hall](destination)
+    - where can I find the [help desk](destination)
+    - where can I find the [stairs](destination)
+    - where can I find the [lift](destination)
+    - can you help me find [toilet](destination)
+    - can you help me find [loo](destination)
+    - can you help me find [bathroom](destination)
+    - can you help me find [office](destination)
+    - can you help me find [lab](destination)
+    - can you help me find [reception](destination)
+    - can you help me find [hall](destination)
+    - can you help me find [help desk](destination)
+    - can you help me find [stairs](destination)
+    - can you help me find [lift](destination)
+    - do you know where is [Alessandro Vinciarelli](name) office
+    - do you know where is [Monica Harvey](name) office
+    - do you know where is [Stacy Marcela](name) office
+    - do you know where is [Robin Bretin](name) office
+    - do you know where is [Gordon Rennie](name) office
+    - do you know where is [Andreas Drakopoulos](name) office
+    - do you know where is [Serena Dimitri](name) office
+    - do you know where is [Sean Westwood](name) office
+    - do you know where is [Morgan Bailey](name) office
+    - do you know where is [Radu Chirila](name) office
+    - do you know where is [Jacqueline Borgstedt](name) office
+    - do you know where is [Tobias Thejll-Madsen](name) office
+    - do you know where is [Maria Vlachou](name) office
+    - do you know where is [Casper Hyllested](name) office
+    - do you know where is [Thomas Goodge](name) office
+    - do you know where is [Christopher Chandler](name) office
+    - do you know where is [Mary Roth](name) office
+    - do you know where is [Rhiannon Fyfe](name) office
+    - do you know where is [Emily O'Hara](name) office
+    - do you know where is [Andrei Birladeanu](name) office
+    - can you lead me to [Alessandro Vinciarelli](name) office
+    - can you lead me to [Monica Harvey](name) office
+    - can you lead me to [Stacy Marcela](name) office
+    - can you lead me to [Robin Bretin](name) office
+    - can you lead me to [Gordon Rennie](name) office
+    - can you lead me to [Andreas Drakopoulos](name) office
+    - can you lead me to [Serena Dimitri](name) office
+    - can you lead me to [Sean Westwood](name) office
+    - can you lead me to [Morgan Bailey](name) office
+    - can you lead me to [Radu Chirila](name) office
+    - can you lead me to [Jacqueline Borgstedt](name) office
+    - can you lead me to [Tobias Thejll-Madsen](name) office
+    - can you lead me to [Maria Vlachou](name) office
+    - can you lead me to [Casper Hyllested](name) office
+    - can you lead me to [Thomas Goodge](name) office
+    - can you lead me to [Christopher Chandler](name) office
+    - can you lead me to [Mary Roth](name) office
+    - can you lead me to [Rhiannon Fyfe](name) office
+    - can you lead me to [Emily O'Hara](name) office
+    - can you lead me to [Andrei Birladeanu](name) office
+    - can you show me where [Alessandro Vinciarelli](name) office is
+    - can you show me where [Monica Harvey](name) office is
+    - can you show me where [Stacy Marcela](name) office is
+    - can you show me where [Robin Bretin](name) office is
+    - can you show me where [Gordon Rennie](name) office is
+    - can you show me where [Andreas Drakopoulos](name) office is
+    - can you show me where [Serena Dimitri](name) office is
+    - can you show me where [Sean Westwood](name) office is
+    - can you show me where [Morgan Bailey](name) office is
+    - can you show me where [Radu Chirila](name) office is
+    - can you show me where [Jacqueline Borgstedt](name) office is
+    - can you show me where [Tobias Thejll-Madsen](name) office is
+    - can you show me where [Maria Vlachou](name) office is
+    - can you show me where [Casper Hyllested](name) office is
+    - can you show me where [Thomas Goodge](name) office is
+    - can you show me where [Christopher Chandler](name) office is
+    - can you show me where [Mary Roth](name) office is
+    - can you show me where [Rhiannon Fyfe](name) office is
+    - can you show me where [Emily O'Hara](name) office is
+    - can you show me where [Andrei Birladeanu](name) office is
+    - do you know where [Alessandro Vinciarelli](name) office is
+    - do you know where [Monica Harvey](name) office is
+    - do you know where [Stacy Marcela](name) office is
+    - do you know where [Robin Bretin](name) office is
+    - do you know where [Gordon Rennie](name) office is
+    - do you know where [Andreas Drakopoulos](name) office is
+    - do you know where [Serena Dimitri](name) office is
+    - do you know where [Sean Westwood](name) office is
+    - do you know where [Morgan Bailey](name) office is
+    - do you know where [Radu Chirila](name) office is
+    - do you know where [Jacqueline Borgstedt](name) office is
+    - do you know where [Tobias Thejll-Madsen](name) office is
+    - do you know where [Maria Vlachou](name) office is
+    - do you know where [Casper Hyllested](name) office is
+    - do you know where [Thomas Goodge](name) office is
+    - do you know where [Christopher Chandler](name) office is
+    - do you know where [Mary Roth](name) office is
+    - do you know where [Rhiannon Fyfe](name) office is
+    - do you know where [Emily O'Hara](name) office is
+    - do you know where [Andrei Birladeanu](name) office is
+    - can you point me to [Alessandro Vinciarelli](name) office
+    - can you point me to [Monica Harvey](name) office
+    - can you point me to [Stacy Marcela](name) office
+    - can you point me to [Robin Bretin](name) office
+    - can you point me to [Gordon Rennie](name) office
+    - can you point me to [Andreas Drakopoulos](name) office
+    - can you point me to [Serena Dimitri](name) office
+    - can you point me to [Sean Westwood](name) office
+    - can you point me to [Morgan Bailey](name) office
+    - can you point me to [Radu Chirila](name) office
+    - can you point me to [Jacqueline Borgstedt](name) office
+    - can you point me to [Tobias Thejll-Madsen](name) office
+    - can you point me to [Maria Vlachou](name) office
+    - can you point me to [Casper Hyllested](name) office
+    - can you point me to [Thomas Goodge](name) office
+    - can you point me to [Christopher Chandler](name) office
+    - can you point me to [Mary Roth](name) office
+    - can you point me to [Rhiannon Fyfe](name) office
+    - can you point me to [Emily O'Hara](name) office
+    - can you point me to [Andrei Birladeanu](name) office
+    - where is [Alessandro Vinciarelli](name)office
+    - where is [Monica Harvey](name)office
+    - where is [Stacy Marcela](name)office
+    - where is [Robin Bretin](name)office
+    - where is [Gordon Rennie](name)office
+    - where is [Andreas Drakopoulos](name)office
+    - where is [Serena Dimitri](name)office
+    - where is [Sean Westwood](name)office
+    - where is [Morgan Bailey](name)office
+    - where is [Radu Chirila](name)office
+    - where is [Jacqueline Borgstedt](name)office
+    - where is [Tobias Thejll-Madsen](name)office
+    - where is [Maria Vlachou](name)office
+    - where is [Casper Hyllested](name)office
+    - where is [Thomas Goodge](name)office
+    - where is [Christopher Chandler](name)office
+    - where is [Mary Roth](name)office
+    - where is [Rhiannon Fyfe](name)office
+    - where is [Emily O'Hara](name)office
+    - where is [Andrei Birladeanu](name)office
+    - tell me where [Alessandro Vinciarelli](name) office is
+    - tell me where [Monica Harvey](name) office is
+    - tell me where [Stacy Marcela](name) office is
+    - tell me where [Robin Bretin](name) office is
+    - tell me where [Gordon Rennie](name) office is
+    - tell me where [Andreas Drakopoulos](name) office is
+    - tell me where [Serena Dimitri](name) office is
+    - tell me where [Sean Westwood](name) office is
+    - tell me where [Morgan Bailey](name) office is
+    - tell me where [Radu Chirila](name) office is
+    - tell me where [Jacqueline Borgstedt](name) office is
+    - tell me where [Tobias Thejll-Madsen](name) office is
+    - tell me where [Maria Vlachou](name) office is
+    - tell me where [Casper Hyllested](name) office is
+    - tell me where [Thomas Goodge](name) office is
+    - tell me where [Christopher Chandler](name) office is
+    - tell me where [Mary Roth](name) office is
+    - tell me where [Rhiannon Fyfe](name) office is
+    - tell me where [Emily O'Hara](name) office is
+    - tell me where [Andrei Birladeanu](name) office is
+    - how do I find [Alessandro Vinciarelli](name) office
+    - how do I find [Monica Harvey](name) office
+    - how do I find [Stacy Marcela](name) office
+    - how do I find [Robin Bretin](name) office
+    - how do I find [Gordon Rennie](name) office
+    - how do I find [Andreas Drakopoulos](name) office
+    - how do I find [Serena Dimitri](name) office
+    - how do I find [Sean Westwood](name) office
+    - how do I find [Morgan Bailey](name) office
+    - how do I find [Radu Chirila](name) office
+    - how do I find [Jacqueline Borgstedt](name) office
+    - how do I find [Tobias Thejll-Madsen](name) office
+    - how do I find [Maria Vlachou](name) office
+    - how do I find [Casper Hyllested](name) office
+    - how do I find [Thomas Goodge](name) office
+    - how do I find [Christopher Chandler](name) office
+    - how do I find [Mary Roth](name) office
+    - how do I find [Rhiannon Fyfe](name) office
+    - how do I find [Emily O'Hara](name) office
+    - how do I find [Andrei Birladeanu](name) office
+    - where can I find [Alessandro Vinciarelli](name)office
+    - where can I find [Monica Harvey](name)office
+    - where can I find [Stacy Marcela](name)office
+    - where can I find [Robin Bretin](name)office
+    - where can I find [Gordon Rennie](name)office
+    - where can I find [Andreas Drakopoulos](name)office
+    - where can I find [Serena Dimitri](name)office
+    - where can I find [Sean Westwood](name)office
+    - where can I find [Morgan Bailey](name)office
+    - where can I find [Radu Chirila](name)office
+    - where can I find [Jacqueline Borgstedt](name)office
+    - where can I find [Tobias Thejll-Madsen](name)office
+    - where can I find [Maria Vlachou](name)office
+    - where can I find [Casper Hyllested](name)office
+    - where can I find [Thomas Goodge](name)office
+    - where can I find [Christopher Chandler](name)office
+    - where can I find [Mary Roth](name)office
+    - where can I find [Rhiannon Fyfe](name)office
+    - where can I find [Emily O'Hara](name)office
+    - where can I find [Andrei Birladeanu](name)office
+    - can you help me find [Alessandro Vinciarelli](name) office
+    - can you help me find [Monica Harvey](name) office
+    - can you help me find [Stacy Marcela](name) office
+    - can you help me find [Robin Bretin](name) office
+    - can you help me find [Gordon Rennie](name) office
+    - can you help me find [Andreas Drakopoulos](name) office
+    - can you help me find [Serena Dimitri](name) office
+    - can you help me find [Sean Westwood](name) office
+    - can you help me find [Morgan Bailey](name) office
+    - can you help me find [Radu Chirila](name) office
+    - can you help me find [Jacqueline Borgstedt](name) office
+    - can you help me find [Tobias Thejll-Madsen](name) office
+    - can you help me find [Maria Vlachou](name) office
+    - can you help me find [Casper Hyllested](name) office
+    - can you help me find [Thomas Goodge](name) office
+    - can you help me find [Christopher Chandler](name) office
+    - can you help me find [Mary Roth](name) office
+    - can you help me find [Rhiannon Fyfe](name) office
+    - can you help me find [Emily O'Hara](name) office
+    - can you help me find [Andrei Birladeanu](name) office
+    - do you know where is Mr [Alessandro Vinciarelli](name) office
+    - do you know where is Mr [Monica Harvey](name) office
+    - do you know where is Mr [Stacy Marcela](name) office
+    - do you know where is Mr [Robin Bretin](name) office
+    - do you know where is Mr [Gordon Rennie](name) office
+    - do you know where is Mr [Andreas Drakopoulos](name) office
+    - do you know where is Mr [Serena Dimitri](name) office
+    - do you know where is Mr [Sean Westwood](name) office
+    - do you know where is Mr [Morgan Bailey](name) office
+    - do you know where is Mr [Radu Chirila](name) office
+    - do you know where is Mr [Jacqueline Borgstedt](name) office
+    - do you know where is Mr [Tobias Thejll-Madsen](name) office
+    - do you know where is Mr [Maria Vlachou](name) office
+    - do you know where is Mr [Casper Hyllested](name) office
+    - do you know where is Mr [Thomas Goodge](name) office
+    - do you know where is Mr [Christopher Chandler](name) office
+    - do you know where is Mr [Mary Roth](name) office
+    - do you know where is Mr [Rhiannon Fyfe](name) office
+    - do you know where is Mr [Emily O'Hara](name) office
+    - do you know where is Mr [Andrei Birladeanu](name) office
+    - can you lead me to Mr [Alessandro Vinciarelli](name) office
+    - can you lead me to Mr [Monica Harvey](name) office
+    - can you lead me to Mr [Stacy Marcela](name) office
+    - can you lead me to Mr [Robin Bretin](name) office
+    - can you lead me to Mr [Gordon Rennie](name) office
+    - can you lead me to Mr [Andreas Drakopoulos](name) office
+    - can you lead me to Mr [Serena Dimitri](name) office
+    - can you lead me to Mr [Sean Westwood](name) office
+    - can you lead me to Mr [Morgan Bailey](name) office
+    - can you lead me to Mr [Radu Chirila](name) office
+    - can you lead me to Mr [Jacqueline Borgstedt](name) office
+    - can you lead me to Mr [Tobias Thejll-Madsen](name) office
+    - can you lead me to Mr [Maria Vlachou](name) office
+    - can you lead me to Mr [Casper Hyllested](name) office
+    - can you lead me to Mr [Thomas Goodge](name) office
+    - can you lead me to Mr [Christopher Chandler](name) office
+    - can you lead me to Mr [Mary Roth](name) office
+    - can you lead me to Mr [Rhiannon Fyfe](name) office
+    - can you lead me to Mr [Emily O'Hara](name) office
+    - can you lead me to Mr [Andrei Birladeanu](name) office
+    - can you show me where Mr [Alessandro Vinciarelli](name) office is
+    - can you show me where Mr [Monica Harvey](name) office is
+    - can you show me where Mr [Stacy Marcela](name) office is
+    - can you show me where Mr [Robin Bretin](name) office is
+    - can you show me where Mr [Gordon Rennie](name) office is
+    - can you show me where Mr [Andreas Drakopoulos](name) office is
+    - can you show me where Mr [Serena Dimitri](name) office is
+    - can you show me where Mr [Sean Westwood](name) office is
+    - can you show me where Mr [Morgan Bailey](name) office is
+    - can you show me where Mr [Radu Chirila](name) office is
+    - can you show me where Mr [Jacqueline Borgstedt](name) office is
+    - can you show me where Mr [Tobias Thejll-Madsen](name) office is
+    - can you show me where Mr [Maria Vlachou](name) office is
+    - can you show me where Mr [Casper Hyllested](name) office is
+    - can you show me where Mr [Thomas Goodge](name) office is
+    - can you show me where Mr [Christopher Chandler](name) office is
+    - can you show me where Mr [Mary Roth](name) office is
+    - can you show me where Mr [Rhiannon Fyfe](name) office is
+    - can you show me where Mr [Emily O'Hara](name) office is
+    - can you show me where Mr [Andrei Birladeanu](name) office is
+    - do you know where Mr [Alessandro Vinciarelli](name) office is
+    - do you know where Mr [Monica Harvey](name) office is
+    - do you know where Mr [Stacy Marcela](name) office is
+    - do you know where Mr [Robin Bretin](name) office is
+    - do you know where Mr [Gordon Rennie](name) office is
+    - do you know where Mr [Andreas Drakopoulos](name) office is
+    - do you know where Mr [Serena Dimitri](name) office is
+    - do you know where Mr [Sean Westwood](name) office is
+    - do you know where Mr [Morgan Bailey](name) office is
+    - do you know where Mr [Radu Chirila](name) office is
+    - do you know where Mr [Jacqueline Borgstedt](name) office is
+    - do you know where Mr [Tobias Thejll-Madsen](name) office is
+    - do you know where Mr [Maria Vlachou](name) office is
+    - do you know where Mr [Casper Hyllested](name) office is
+    - do you know where Mr [Thomas Goodge](name) office is
+    - do you know where Mr [Christopher Chandler](name) office is
+    - do you know where Mr [Mary Roth](name) office is
+    - do you know where Mr [Rhiannon Fyfe](name) office is
+    - do you know where Mr [Emily O'Hara](name) office is
+    - do you know where Mr [Andrei Birladeanu](name) office is
+    - can you point me to Mr [Alessandro Vinciarelli](name) office
+    - can you point me to Mr [Monica Harvey](name) office
+    - can you point me to Mr [Stacy Marcela](name) office
+    - can you point me to Mr [Robin Bretin](name) office
+    - can you point me to Mr [Gordon Rennie](name) office
+    - can you point me to Mr [Andreas Drakopoulos](name) office
+    - can you point me to Mr [Serena Dimitri](name) office
+    - can you point me to Mr [Sean Westwood](name) office
+    - can you point me to Mr [Morgan Bailey](name) office
+    - can you point me to Mr [Radu Chirila](name) office
+    - can you point me to Mr [Jacqueline Borgstedt](name) office
+    - can you point me to Mr [Tobias Thejll-Madsen](name) office
+    - can you point me to Mr [Maria Vlachou](name) office
+    - can you point me to Mr [Casper Hyllested](name) office
+    - can you point me to Mr [Thomas Goodge](name) office
+    - can you point me to Mr [Christopher Chandler](name) office
+    - can you point me to Mr [Mary Roth](name) office
+    - can you point me to Mr [Rhiannon Fyfe](name) office
+    - can you point me to Mr [Emily O'Hara](name) office
+    - can you point me to Mr [Andrei Birladeanu](name) office
+    - where is Mr [Alessandro Vinciarelli](name)office
+    - where is Mr [Monica Harvey](name)office
+    - where is Mr [Stacy Marcela](name)office
+    - where is Mr [Robin Bretin](name)office
+    - where is Mr [Gordon Rennie](name)office
+    - where is Mr [Andreas Drakopoulos](name)office
+    - where is Mr [Serena Dimitri](name)office
+    - where is Mr [Sean Westwood](name)office
+    - where is Mr [Morgan Bailey](name)office
+    - where is Mr [Radu Chirila](name)office
+    - where is Mr [Jacqueline Borgstedt](name)office
+    - where is Mr [Tobias Thejll-Madsen](name)office
+    - where is Mr [Maria Vlachou](name)office
+    - where is Mr [Casper Hyllested](name)office
+    - where is Mr [Thomas Goodge](name)office
+    - where is Mr [Christopher Chandler](name)office
+    - where is Mr [Mary Roth](name)office
+    - where is Mr [Rhiannon Fyfe](name)office
+    - where is Mr [Emily O'Hara](name)office
+    - where is Mr [Andrei Birladeanu](name)office
+    - tell me where Mr [Alessandro Vinciarelli](name) office is
+    - tell me where Mr [Monica Harvey](name) office is
+    - tell me where Mr [Stacy Marcela](name) office is
+    - tell me where Mr [Robin Bretin](name) office is
+    - tell me where Mr [Gordon Rennie](name) office is
+    - tell me where Mr [Andreas Drakopoulos](name) office is
+    - tell me where Mr [Serena Dimitri](name) office is
+    - tell me where Mr [Sean Westwood](name) office is
+    - tell me where Mr [Morgan Bailey](name) office is
+    - tell me where Mr [Radu Chirila](name) office is
+    - tell me where Mr [Jacqueline Borgstedt](name) office is
+    - tell me where Mr [Tobias Thejll-Madsen](name) office is
+    - tell me where Mr [Maria Vlachou](name) office is
+    - tell me where Mr [Casper Hyllested](name) office is
+    - tell me where Mr [Thomas Goodge](name) office is
+    - tell me where Mr [Christopher Chandler](name) office is
+    - tell me where Mr [Mary Roth](name) office is
+    - tell me where Mr [Rhiannon Fyfe](name) office is
+    - tell me where Mr [Emily O'Hara](name) office is
+    - tell me where Mr [Andrei Birladeanu](name) office is
+    - how do I find Mr [Alessandro Vinciarelli](name) office
+    - how do I find Mr [Monica Harvey](name) office
+    - how do I find Mr [Stacy Marcela](name) office
+    - how do I find Mr [Robin Bretin](name) office
+    - how do I find Mr [Gordon Rennie](name) office
+    - how do I find Mr [Andreas Drakopoulos](name) office
+    - how do I find Mr [Serena Dimitri](name) office
+    - how do I find Mr [Sean Westwood](name) office
+    - how do I find Mr [Morgan Bailey](name) office
+    - how do I find Mr [Radu Chirila](name) office
+    - how do I find Mr [Jacqueline Borgstedt](name) office
+    - how do I find Mr [Tobias Thejll-Madsen](name) office
+    - how do I find Mr [Maria Vlachou](name) office
+    - how do I find Mr [Casper Hyllested](name) office
+    - how do I find Mr [Thomas Goodge](name) office
+    - how do I find Mr [Christopher Chandler](name) office
+    - how do I find Mr [Mary Roth](name) office
+    - how do I find Mr [Rhiannon Fyfe](name) office
+    - how do I find Mr [Emily O'Hara](name) office
+    - how do I find Mr [Andrei Birladeanu](name) office
+    - where can I find Mr [Alessandro Vinciarelli](name)office
+    - where can I find Mr [Monica Harvey](name)office
+    - where can I find Mr [Stacy Marcela](name)office
+    - where can I find Mr [Robin Bretin](name)office
+    - where can I find Mr [Gordon Rennie](name)office
+    - where can I find Mr [Andreas Drakopoulos](name)office
+    - where can I find Mr [Serena Dimitri](name)office
+    - where can I find Mr [Sean Westwood](name)office
+    - where can I find Mr [Morgan Bailey](name)office
+    - where can I find Mr [Radu Chirila](name)office
+    - where can I find Mr [Jacqueline Borgstedt](name)office
+    - where can I find Mr [Tobias Thejll-Madsen](name)office
+    - where can I find Mr [Maria Vlachou](name)office
+    - where can I find Mr [Casper Hyllested](name)office
+    - where can I find Mr [Thomas Goodge](name)office
+    - where can I find Mr [Christopher Chandler](name)office
+    - where can I find Mr [Mary Roth](name)office
+    - where can I find Mr [Rhiannon Fyfe](name)office
+    - where can I find Mr [Emily O'Hara](name)office
+    - where can I find Mr [Andrei Birladeanu](name)office
+    - can you help me find Mr [Alessandro Vinciarelli](name) office
+    - can you help me find Mr [Monica Harvey](name) office
+    - can you help me find Mr [Stacy Marcela](name) office
+    - can you help me find Mr [Robin Bretin](name) office
+    - can you help me find Mr [Gordon Rennie](name) office
+    - can you help me find Mr [Andreas Drakopoulos](name) office
+    - can you help me find Mr [Serena Dimitri](name) office
+    - can you help me find Mr [Sean Westwood](name) office
+    - can you help me find Mr [Morgan Bailey](name) office
+    - can you help me find Mr [Radu Chirila](name) office
+    - can you help me find Mr [Jacqueline Borgstedt](name) office
+    - can you help me find Mr [Tobias Thejll-Madsen](name) office
+    - can you help me find Mr [Maria Vlachou](name) office
+    - can you help me find Mr [Casper Hyllested](name) office
+    - can you help me find Mr [Thomas Goodge](name) office
+    - can you help me find Mr [Christopher Chandler](name) office
+    - can you help me find Mr [Mary Roth](name) office
+    - can you help me find Mr [Rhiannon Fyfe](name) office
+    - can you help me find Mr [Emily O'Hara](name) office
+    - can you help me find Mr [Andrei Birladeanu](name) office
+    - do you know where is Mss [Alessandro Vinciarelli](name) office
+    - do you know where is Mss [Monica Harvey](name) office
+    - do you know where is Mss [Stacy Marcela](name) office
+    - do you know where is Mss [Robin Bretin](name) office
+    - do you know where is Mss [Gordon Rennie](name) office
+    - do you know where is Mss [Andreas Drakopoulos](name) office
+    - do you know where is Mss [Serena Dimitri](name) office
+    - do you know where is Mss [Sean Westwood](name) office
+    - do you know where is Mss [Morgan Bailey](name) office
+    - do you know where is Mss [Radu Chirila](name) office
+    - do you know where is Mss [Jacqueline Borgstedt](name) office
+    - do you know where is Mss [Tobias Thejll-Madsen](name) office
+    - do you know where is Mss [Maria Vlachou](name) office
+    - do you know where is Mss [Casper Hyllested](name) office
+    - do you know where is Mss [Thomas Goodge](name) office
+    - do you know where is Mss [Christopher Chandler](name) office
+    - do you know where is Mss [Mary Roth](name) office
+    - do you know where is Mss [Rhiannon Fyfe](name) office
+    - do you know where is Mss [Emily O'Hara](name) office
+    - do you know where is Mss [Andrei Birladeanu](name) office
+    - can you lead me to Mss [Alessandro Vinciarelli](name) office
+    - can you lead me to Mss [Monica Harvey](name) office
+    - can you lead me to Mss [Stacy Marcela](name) office
+    - can you lead me to Mss [Robin Bretin](name) office
+    - can you lead me to Mss [Gordon Rennie](name) office
+    - can you lead me to Mss [Andreas Drakopoulos](name) office
+    - can you lead me to Mss [Serena Dimitri](name) office
+    - can you lead me to Mss [Sean Westwood](name) office
+    - can you lead me to Mss [Morgan Bailey](name) office
+    - can you lead me to Mss [Radu Chirila](name) office
+    - can you lead me to Mss [Jacqueline Borgstedt](name) office
+    - can you lead me to Mss [Tobias Thejll-Madsen](name) office
+    - can you lead me to Mss [Maria Vlachou](name) office
+    - can you lead me to Mss [Casper Hyllested](name) office
+    - can you lead me to Mss [Thomas Goodge](name) office
+    - can you lead me to Mss [Christopher Chandler](name) office
+    - can you lead me to Mss [Mary Roth](name) office
+    - can you lead me to Mss [Rhiannon Fyfe](name) office
+    - can you lead me to Mss [Emily O'Hara](name) office
+    - can you lead me to Mss [Andrei Birladeanu](name) office
+    - can you show me where Mss [Alessandro Vinciarelli](name) office is
+    - can you show me where Mss [Monica Harvey](name) office is
+    - can you show me where Mss [Stacy Marcela](name) office is
+    - can you show me where Mss [Robin Bretin](name) office is
+    - can you show me where Mss [Gordon Rennie](name) office is
+    - can you show me where Mss [Andreas Drakopoulos](name) office is
+    - can you show me where Mss [Serena Dimitri](name) office is
+    - can you show me where Mss [Sean Westwood](name) office is
+    - can you show me where Mss [Morgan Bailey](name) office is
+    - can you show me where Mss [Radu Chirila](name) office is
+    - can you show me where Mss [Jacqueline Borgstedt](name) office is
+    - can you show me where Mss [Tobias Thejll-Madsen](name) office is
+    - can you show me where Mss [Maria Vlachou](name) office is
+    - can you show me where Mss [Casper Hyllested](name) office is
+    - can you show me where Mss [Thomas Goodge](name) office is
+    - can you show me where Mss [Christopher Chandler](name) office is
+    - can you show me where Mss [Mary Roth](name) office is
+    - can you show me where Mss [Rhiannon Fyfe](name) office is
+    - can you show me where Mss [Emily O'Hara](name) office is
+    - can you show me where Mss [Andrei Birladeanu](name) office is
+    - do you know where Mss [Alessandro Vinciarelli](name) office is
+    - do you know where Mss [Monica Harvey](name) office is
+    - do you know where Mss [Stacy Marcela](name) office is
+    - do you know where Mss [Robin Bretin](name) office is
+    - do you know where Mss [Gordon Rennie](name) office is
+    - do you know where Mss [Andreas Drakopoulos](name) office is
+    - do you know where Mss [Serena Dimitri](name) office is
+    - do you know where Mss [Sean Westwood](name) office is
+    - do you know where Mss [Morgan Bailey](name) office is
+    - do you know where Mss [Radu Chirila](name) office is
+    - do you know where Mss [Jacqueline Borgstedt](name) office is
+    - do you know where Mss [Tobias Thejll-Madsen](name) office is
+    - do you know where Mss [Maria Vlachou](name) office is
+    - do you know where Mss [Casper Hyllested](name) office is
+    - do you know where Mss [Thomas Goodge](name) office is
+    - do you know where Mss [Christopher Chandler](name) office is
+    - do you know where Mss [Mary Roth](name) office is
+    - do you know where Mss [Rhiannon Fyfe](name) office is
+    - do you know where Mss [Emily O'Hara](name) office is
+    - do you know where Mss [Andrei Birladeanu](name) office is
+    - can you point me to Mss [Alessandro Vinciarelli](name) office
+    - can you point me to Mss [Monica Harvey](name) office
+    - can you point me to Mss [Stacy Marcela](name) office
+    - can you point me to Mss [Robin Bretin](name) office
+    - can you point me to Mss [Gordon Rennie](name) office
+    - can you point me to Mss [Andreas Drakopoulos](name) office
+    - can you point me to Mss [Serena Dimitri](name) office
+    - can you point me to Mss [Sean Westwood](name) office
+    - can you point me to Mss [Morgan Bailey](name) office
+    - can you point me to Mss [Radu Chirila](name) office
+    - can you point me to Mss [Jacqueline Borgstedt](name) office
+    - can you point me to Mss [Tobias Thejll-Madsen](name) office
+    - can you point me to Mss [Maria Vlachou](name) office
+    - can you point me to Mss [Casper Hyllested](name) office
+    - can you point me to Mss [Thomas Goodge](name) office
+    - can you point me to Mss [Christopher Chandler](name) office
+    - can you point me to Mss [Mary Roth](name) office
+    - can you point me to Mss [Rhiannon Fyfe](name) office
+    - can you point me to Mss [Emily O'Hara](name) office
+    - can you point me to Mss [Andrei Birladeanu](name) office
+    - where is Mss [Alessandro Vinciarelli](name)office
+    - where is Mss [Monica Harvey](name)office
+    - where is Mss [Stacy Marcela](name)office
+    - where is Mss [Robin Bretin](name)office
+    - where is Mss [Gordon Rennie](name)office
+    - where is Mss [Andreas Drakopoulos](name)office
+    - where is Mss [Serena Dimitri](name)office
+    - where is Mss [Sean Westwood](name)office
+    - where is Mss [Morgan Bailey](name)office
+    - where is Mss [Radu Chirila](name)office
+    - where is Mss [Jacqueline Borgstedt](name)office
+    - where is Mss [Tobias Thejll-Madsen](name)office
+    - where is Mss [Maria Vlachou](name)office
+    - where is Mss [Casper Hyllested](name)office
+    - where is Mss [Thomas Goodge](name)office
+    - where is Mss [Christopher Chandler](name)office
+    - where is Mss [Mary Roth](name)office
+    - where is Mss [Rhiannon Fyfe](name)office
+    - where is Mss [Emily O'Hara](name)office
+    - where is Mss [Andrei Birladeanu](name)office
+    - tell me where Mss [Alessandro Vinciarelli](name) office is
+    - tell me where Mss [Monica Harvey](name) office is
+    - tell me where Mss [Stacy Marcela](name) office is
+    - tell me where Mss [Robin Bretin](name) office is
+    - tell me where Mss [Gordon Rennie](name) office is
+    - tell me where Mss [Andreas Drakopoulos](name) office is
+    - tell me where Mss [Serena Dimitri](name) office is
+    - tell me where Mss [Sean Westwood](name) office is
+    - tell me where Mss [Morgan Bailey](name) office is
+    - tell me where Mss [Radu Chirila](name) office is
+    - tell me where Mss [Jacqueline Borgstedt](name) office is
+    - tell me where Mss [Tobias Thejll-Madsen](name) office is
+    - tell me where Mss [Maria Vlachou](name) office is
+    - tell me where Mss [Casper Hyllested](name) office is
+    - tell me where Mss [Thomas Goodge](name) office is
+    - tell me where Mss [Christopher Chandler](name) office is
+    - tell me where Mss [Mary Roth](name) office is
+    - tell me where Mss [Rhiannon Fyfe](name) office is
+    - tell me where Mss [Emily O'Hara](name) office is
+    - tell me where Mss [Andrei Birladeanu](name) office is
+    - how do I find Mss [Alessandro Vinciarelli](name) office
+    - how do I find Mss [Monica Harvey](name) office
+    - how do I find Mss [Stacy Marcela](name) office
+    - how do I find Mss [Robin Bretin](name) office
+    - how do I find Mss [Gordon Rennie](name) office
+    - how do I find Mss [Andreas Drakopoulos](name) office
+    - how do I find Mss [Serena Dimitri](name) office
+    - how do I find Mss [Sean Westwood](name) office
+    - how do I find Mss [Morgan Bailey](name) office
+    - how do I find Mss [Radu Chirila](name) office
+    - how do I find Mss [Jacqueline Borgstedt](name) office
+    - how do I find Mss [Tobias Thejll-Madsen](name) office
+    - how do I find Mss [Maria Vlachou](name) office
+    - how do I find Mss [Casper Hyllested](name) office
+    - how do I find Mss [Thomas Goodge](name) office
+    - how do I find Mss [Christopher Chandler](name) office
+    - how do I find Mss [Mary Roth](name) office
+    - how do I find Mss [Rhiannon Fyfe](name) office
+    - how do I find Mss [Emily O'Hara](name) office
+    - how do I find Mss [Andrei Birladeanu](name) office
+    - where can I find Mss [Alessandro Vinciarelli](name)office
+    - where can I find Mss [Monica Harvey](name)office
+    - where can I find Mss [Stacy Marcela](name)office
+    - where can I find Mss [Robin Bretin](name)office
+    - where can I find Mss [Gordon Rennie](name)office
+    - where can I find Mss [Andreas Drakopoulos](name)office
+    - where can I find Mss [Serena Dimitri](name)office
+    - where can I find Mss [Sean Westwood](name)office
+    - where can I find Mss [Morgan Bailey](name)office
+    - where can I find Mss [Radu Chirila](name)office
+    - where can I find Mss [Jacqueline Borgstedt](name)office
+    - where can I find Mss [Tobias Thejll-Madsen](name)office
+    - where can I find Mss [Maria Vlachou](name)office
+    - where can I find Mss [Casper Hyllested](name)office
+    - where can I find Mss [Thomas Goodge](name)office
+    - where can I find Mss [Christopher Chandler](name)office
+    - where can I find Mss [Mary Roth](name)office
+    - where can I find Mss [Rhiannon Fyfe](name)office
+    - where can I find Mss [Emily O'Hara](name)office
+    - where can I find Mss [Andrei Birladeanu](name)office
+    - can you help me find Mss [Alessandro Vinciarelli](name) office
+    - can you help me find Mss [Monica Harvey](name) office
+    - can you help me find Mss [Stacy Marcela](name) office
+    - can you help me find Mss [Robin Bretin](name) office
+    - can you help me find Mss [Gordon Rennie](name) office
+    - can you help me find Mss [Andreas Drakopoulos](name) office
+    - can you help me find Mss [Serena Dimitri](name) office
+    - can you help me find Mss [Sean Westwood](name) office
+    - can you help me find Mss [Morgan Bailey](name) office
+    - can you help me find Mss [Radu Chirila](name) office
+    - can you help me find Mss [Jacqueline Borgstedt](name) office
+    - can you help me find Mss [Tobias Thejll-Madsen](name) office
+    - can you help me find Mss [Maria Vlachou](name) office
+    - can you help me find Mss [Casper Hyllested](name) office
+    - can you help me find Mss [Thomas Goodge](name) office
+    - can you help me find Mss [Christopher Chandler](name) office
+    - can you help me find Mss [Mary Roth](name) office
+    - can you help me find Mss [Rhiannon Fyfe](name) office
+    - can you help me find Mss [Emily O'Hara](name) office
+    - can you help me find Mss [Andrei Birladeanu](name) office
+    - do you know where is Mrs [Alessandro Vinciarelli](name) office
+    - do you know where is Mrs [Monica Harvey](name) office
+    - do you know where is Mrs [Stacy Marcela](name) office
+    - do you know where is Mrs [Robin Bretin](name) office
+    - do you know where is Mrs [Gordon Rennie](name) office
+    - do you know where is Mrs [Andreas Drakopoulos](name) office
+    - do you know where is Mrs [Serena Dimitri](name) office
+    - do you know where is Mrs [Sean Westwood](name) office
+    - do you know where is Mrs [Morgan Bailey](name) office
+    - do you know where is Mrs [Radu Chirila](name) office
+    - do you know where is Mrs [Jacqueline Borgstedt](name) office
+    - do you know where is Mrs [Tobias Thejll-Madsen](name) office
+    - do you know where is Mrs [Maria Vlachou](name) office
+    - do you know where is Mrs [Casper Hyllested](name) office
+    - do you know where is Mrs [Thomas Goodge](name) office
+    - do you know where is Mrs [Christopher Chandler](name) office
+    - do you know where is Mrs [Mary Roth](name) office
+    - do you know where is Mrs [Rhiannon Fyfe](name) office
+    - do you know where is Mrs [Emily O'Hara](name) office
+    - do you know where is Mrs [Andrei Birladeanu](name) office
+    - can you lead me to Mrs[Alessandro Vinciarelli](name) office
+    - can you lead me to Mrs[Monica Harvey](name) office
+    - can you lead me to Mrs[Stacy Marcela](name) office
+    - can you lead me to Mrs[Robin Bretin](name) office
+    - can you lead me to Mrs[Gordon Rennie](name) office
+    - can you lead me to Mrs[Andreas Drakopoulos](name) office
+    - can you lead me to Mrs[Serena Dimitri](name) office
+    - can you lead me to Mrs[Sean Westwood](name) office
+    - can you lead me to Mrs[Morgan Bailey](name) office
+    - can you lead me to Mrs[Radu Chirila](name) office
+    - can you lead me to Mrs[Jacqueline Borgstedt](name) office
+    - can you lead me to Mrs[Tobias Thejll-Madsen](name) office
+    - can you lead me to Mrs[Maria Vlachou](name) office
+    - can you lead me to Mrs[Casper Hyllested](name) office
+    - can you lead me to Mrs[Thomas Goodge](name) office
+    - can you lead me to Mrs[Christopher Chandler](name) office
+    - can you lead me to Mrs[Mary Roth](name) office
+    - can you lead me to Mrs[Rhiannon Fyfe](name) office
+    - can you lead me to Mrs[Emily O'Hara](name) office
+    - can you lead me to Mrs[Andrei Birladeanu](name) office
+    - can you show me where Mrs [Alessandro Vinciarelli](name) office is
+    - can you show me where Mrs [Monica Harvey](name) office is
+    - can you show me where Mrs [Stacy Marcela](name) office is
+    - can you show me where Mrs [Robin Bretin](name) office is
+    - can you show me where Mrs [Gordon Rennie](name) office is
+    - can you show me where Mrs [Andreas Drakopoulos](name) office is
+    - can you show me where Mrs [Serena Dimitri](name) office is
+    - can you show me where Mrs [Sean Westwood](name) office is
+    - can you show me where Mrs [Morgan Bailey](name) office is
+    - can you show me where Mrs [Radu Chirila](name) office is
+    - can you show me where Mrs [Jacqueline Borgstedt](name) office is
+    - can you show me where Mrs [Tobias Thejll-Madsen](name) office is
+    - can you show me where Mrs [Maria Vlachou](name) office is
+    - can you show me where Mrs [Casper Hyllested](name) office is
+    - can you show me where Mrs [Thomas Goodge](name) office is
+    - can you show me where Mrs [Christopher Chandler](name) office is
+    - can you show me where Mrs [Mary Roth](name) office is
+    - can you show me where Mrs [Rhiannon Fyfe](name) office is
+    - can you show me where Mrs [Emily O'Hara](name) office is
+    - can you show me where Mrs [Andrei Birladeanu](name) office is
+    - do you know where Mrs [Alessandro Vinciarelli](name) office is
+    - do you know where Mrs [Monica Harvey](name) office is
+    - do you know where Mrs [Stacy Marcela](name) office is
+    - do you know where Mrs [Robin Bretin](name) office is
+    - do you know where Mrs [Gordon Rennie](name) office is
+    - do you know where Mrs [Andreas Drakopoulos](name) office is
+    - do you know where Mrs [Serena Dimitri](name) office is
+    - do you know where Mrs [Sean Westwood](name) office is
+    - do you know where Mrs [Morgan Bailey](name) office is
+    - do you know where Mrs [Radu Chirila](name) office is
+    - do you know where Mrs [Jacqueline Borgstedt](name) office is
+    - do you know where Mrs [Tobias Thejll-Madsen](name) office is
+    - do you know where Mrs [Maria Vlachou](name) office is
+    - do you know where Mrs [Casper Hyllested](name) office is
+    - do you know where Mrs [Thomas Goodge](name) office is
+    - do you know where Mrs [Christopher Chandler](name) office is
+    - do you know where Mrs [Mary Roth](name) office is
+    - do you know where Mrs [Rhiannon Fyfe](name) office is
+    - do you know where Mrs [Emily O'Hara](name) office is
+    - do you know where Mrs [Andrei Birladeanu](name) office is
+    - can you point me to Mrs [Alessandro Vinciarelli](name) office
+    - can you point me to Mrs [Monica Harvey](name) office
+    - can you point me to Mrs [Stacy Marcela](name) office
+    - can you point me to Mrs [Robin Bretin](name) office
+    - can you point me to Mrs [Gordon Rennie](name) office
+    - can you point me to Mrs [Andreas Drakopoulos](name) office
+    - can you point me to Mrs [Serena Dimitri](name) office
+    - can you point me to Mrs [Sean Westwood](name) office
+    - can you point me to Mrs [Morgan Bailey](name) office
+    - can you point me to Mrs [Radu Chirila](name) office
+    - can you point me to Mrs [Jacqueline Borgstedt](name) office
+    - can you point me to Mrs [Tobias Thejll-Madsen](name) office
+    - can you point me to Mrs [Maria Vlachou](name) office
+    - can you point me to Mrs [Casper Hyllested](name) office
+    - can you point me to Mrs [Thomas Goodge](name) office
+    - can you point me to Mrs [Christopher Chandler](name) office
+    - can you point me to Mrs [Mary Roth](name) office
+    - can you point me to Mrs [Rhiannon Fyfe](name) office
+    - can you point me to Mrs [Emily O'Hara](name) office
+    - can you point me to Mrs [Andrei Birladeanu](name) office
+    - where is Mrs [Alessandro Vinciarelli](name)office
+    - where is Mrs [Monica Harvey](name)office
+    - where is Mrs [Stacy Marcela](name)office
+    - where is Mrs [Robin Bretin](name)office
+    - where is Mrs [Gordon Rennie](name)office
+    - where is Mrs [Andreas Drakopoulos](name)office
+    - where is Mrs [Serena Dimitri](name)office
+    - where is Mrs [Sean Westwood](name)office
+    - where is Mrs [Morgan Bailey](name)office
+    - where is Mrs [Radu Chirila](name)office
+    - where is Mrs [Jacqueline Borgstedt](name)office
+    - where is Mrs [Tobias Thejll-Madsen](name)office
+    - where is Mrs [Maria Vlachou](name)office
+    - where is Mrs [Casper Hyllested](name)office
+    - where is Mrs [Thomas Goodge](name)office
+    - where is Mrs [Christopher Chandler](name)office
+    - where is Mrs [Mary Roth](name)office
+    - where is Mrs [Rhiannon Fyfe](name)office
+    - where is Mrs [Emily O'Hara](name)office
+    - where is Mrs [Andrei Birladeanu](name)office
+    - tell me where Mrs [Alessandro Vinciarelli](name) office is
+    - tell me where Mrs [Monica Harvey](name) office is
+    - tell me where Mrs [Stacy Marcela](name) office is
+    - tell me where Mrs [Robin Bretin](name) office is
+    - tell me where Mrs [Gordon Rennie](name) office is
+    - tell me where Mrs [Andreas Drakopoulos](name) office is
+    - tell me where Mrs [Serena Dimitri](name) office is
+    - tell me where Mrs [Sean Westwood](name) office is
+    - tell me where Mrs [Morgan Bailey](name) office is
+    - tell me where Mrs [Radu Chirila](name) office is
+    - tell me where Mrs [Jacqueline Borgstedt](name) office is
+    - tell me where Mrs [Tobias Thejll-Madsen](name) office is
+    - tell me where Mrs [Maria Vlachou](name) office is
+    - tell me where Mrs [Casper Hyllested](name) office is
+    - tell me where Mrs [Thomas Goodge](name) office is
+    - tell me where Mrs [Christopher Chandler](name) office is
+    - tell me where Mrs [Mary Roth](name) office is
+    - tell me where Mrs [Rhiannon Fyfe](name) office is
+    - tell me where Mrs [Emily O'Hara](name) office is
+    - tell me where Mrs [Andrei Birladeanu](name) office is
+    - how do I find Mrs [Alessandro Vinciarelli](name) office
+    - how do I find Mrs [Monica Harvey](name) office
+    - how do I find Mrs [Stacy Marcela](name) office
+    - how do I find Mrs [Robin Bretin](name) office
+    - how do I find Mrs [Gordon Rennie](name) office
+    - how do I find Mrs [Andreas Drakopoulos](name) office
+    - how do I find Mrs [Serena Dimitri](name) office
+    - how do I find Mrs [Sean Westwood](name) office
+    - how do I find Mrs [Morgan Bailey](name) office
+    - how do I find Mrs [Radu Chirila](name) office
+    - how do I find Mrs [Jacqueline Borgstedt](name) office
+    - how do I find Mrs [Tobias Thejll-Madsen](name) office
+    - how do I find Mrs [Maria Vlachou](name) office
+    - how do I find Mrs [Casper Hyllested](name) office
+    - how do I find Mrs [Thomas Goodge](name) office
+    - how do I find Mrs [Christopher Chandler](name) office
+    - how do I find Mrs [Mary Roth](name) office
+    - how do I find Mrs [Rhiannon Fyfe](name) office
+    - how do I find Mrs [Emily O'Hara](name) office
+    - how do I find Mrs [Andrei Birladeanu](name) office
+    - where can I find Mrs [Alessandro Vinciarelli](name)office
+    - where can I find Mrs [Monica Harvey](name)office
+    - where can I find Mrs [Stacy Marcela](name)office
+    - where can I find Mrs [Robin Bretin](name)office
+    - where can I find Mrs [Gordon Rennie](name)office
+    - where can I find Mrs [Andreas Drakopoulos](name)office
+    - where can I find Mrs [Serena Dimitri](name)office
+    - where can I find Mrs [Sean Westwood](name)office
+    - where can I find Mrs [Morgan Bailey](name)office
+    - where can I find Mrs [Radu Chirila](name)office
+    - where can I find Mrs [Jacqueline Borgstedt](name)office
+    - where can I find Mrs [Tobias Thejll-Madsen](name)office
+    - where can I find Mrs [Maria Vlachou](name)office
+    - where can I find Mrs [Casper Hyllested](name)office
+    - where can I find Mrs [Thomas Goodge](name)office
+    - where can I find Mrs [Christopher Chandler](name)office
+    - where can I find Mrs [Mary Roth](name)office
+    - where can I find Mrs [Rhiannon Fyfe](name)office
+    - where can I find Mrs [Emily O'Hara](name)office
+    - where can I find Mrs [Andrei Birladeanu](name)office
+    - can you help me find Mrs [Alessandro Vinciarelli](name) office
+    - can you help me find Mrs [Monica Harvey](name) office
+    - can you help me find Mrs [Stacy Marcela](name) office
+    - can you help me find Mrs [Robin Bretin](name) office
+    - can you help me find Mrs [Gordon Rennie](name) office
+    - can you help me find Mrs [Andreas Drakopoulos](name) office
+    - can you help me find Mrs [Serena Dimitri](name) office
+    - can you help me find Mrs [Sean Westwood](name) office
+    - can you help me find Mrs [Morgan Bailey](name) office
+    - can you help me find Mrs [Radu Chirila](name) office
+    - can you help me find Mrs [Jacqueline Borgstedt](name) office
+    - can you help me find Mrs [Tobias Thejll-Madsen](name) office
+    - can you help me find Mrs [Maria Vlachou](name) office
+    - can you help me find Mrs [Casper Hyllested](name) office
+    - can you help me find Mrs [Thomas Goodge](name) office
+    - can you help me find Mrs [Christopher Chandler](name) office
+    - can you help me find Mrs [Mary Roth](name) office
+    - can you help me find Mrs [Rhiannon Fyfe](name) office
+    - can you help me find Mrs [Emily O'Hara](name) office
+    - can you help me find Mrs [Andrei Birladeanu](name) office
+    - do you know where is Dr [Alessandro Vinciarelli](name) office
+    - do you know where is Dr [Monica Harvey](name) office
+    - do you know where is Dr [Stacy Marcela](name) office
+    - do you know where is Dr [Robin Bretin](name) office
+    - do you know where is Dr [Gordon Rennie](name) office
+    - do you know where is Dr [Andreas Drakopoulos](name) office
+    - do you know where is Dr [Serena Dimitri](name) office
+    - do you know where is Dr [Sean Westwood](name) office
+    - do you know where is Dr [Morgan Bailey](name) office
+    - do you know where is Dr [Radu Chirila](name) office
+    - do you know where is Dr [Jacqueline Borgstedt](name) office
+    - do you know where is Dr [Tobias Thejll-Madsen](name) office
+    - do you know where is Dr [Maria Vlachou](name) office
+    - do you know where is Dr [Casper Hyllested](name) office
+    - do you know where is Dr [Thomas Goodge](name) office
+    - do you know where is Dr [Christopher Chandler](name) office
+    - do you know where is Dr [Mary Roth](name) office
+    - do you know where is Dr [Rhiannon Fyfe](name) office
+    - do you know where is Dr [Emily O'Hara](name) office
+    - do you know where is Dr [Andrei Birladeanu](name) office
+    - can you lead me to Dr [Alessandro Vinciarelli](name) office
+    - can you lead me to Dr [Monica Harvey](name) office
+    - can you lead me to Dr [Stacy Marcela](name) office
+    - can you lead me to Dr [Robin Bretin](name) office
+    - can you lead me to Dr [Gordon Rennie](name) office
+    - can you lead me to Dr [Andreas Drakopoulos](name) office
+    - can you lead me to Dr [Serena Dimitri](name) office
+    - can you lead me to Dr [Sean Westwood](name) office
+    - can you lead me to Dr [Morgan Bailey](name) office
+    - can you lead me to Dr [Radu Chirila](name) office
+    - can you lead me to Dr [Jacqueline Borgstedt](name) office
+    - can you lead me to Dr [Tobias Thejll-Madsen](name) office
+    - can you lead me to Dr [Maria Vlachou](name) office
+    - can you lead me to Dr [Casper Hyllested](name) office
+    - can you lead me to Dr [Thomas Goodge](name) office
+    - can you lead me to Dr [Christopher Chandler](name) office
+    - can you lead me to Dr [Mary Roth](name) office
+    - can you lead me to Dr [Rhiannon Fyfe](name) office
+    - can you lead me to Dr [Emily O'Hara](name) office
+    - can you lead me to Dr [Andrei Birladeanu](name) office
+    - can you show me where Dr [Alessandro Vinciarelli](name) office is
+    - can you show me where Dr [Monica Harvey](name) office is
+    - can you show me where Dr [Stacy Marcela](name) office is
+    - can you show me where Dr [Robin Bretin](name) office is
+    - can you show me where Dr [Gordon Rennie](name) office is
+    - can you show me where Dr [Andreas Drakopoulos](name) office is
+    - can you show me where Dr [Serena Dimitri](name) office is
+    - can you show me where Dr [Sean Westwood](name) office is
+    - can you show me where Dr [Morgan Bailey](name) office is
+    - can you show me where Dr [Radu Chirila](name) office is
+    - can you show me where Dr [Jacqueline Borgstedt](name) office is
+    - can you show me where Dr [Tobias Thejll-Madsen](name) office is
+    - can you show me where Dr [Maria Vlachou](name) office is
+    - can you show me where Dr [Casper Hyllested](name) office is
+    - can you show me where Dr [Thomas Goodge](name) office is
+    - can you show me where Dr [Christopher Chandler](name) office is
+    - can you show me where Dr [Mary Roth](name) office is
+    - can you show me where Dr [Rhiannon Fyfe](name) office is
+    - can you show me where Dr [Emily O'Hara](name) office is
+    - can you show me where Dr [Andrei Birladeanu](name) office is
+    - do you know where Dr [Alessandro Vinciarelli](name) office is
+    - do you know where Dr [Monica Harvey](name) office is
+    - do you know where Dr [Stacy Marcela](name) office is
+    - do you know where Dr [Robin Bretin](name) office is
+    - do you know where Dr [Gordon Rennie](name) office is
+    - do you know where Dr [Andreas Drakopoulos](name) office is
+    - do you know where Dr [Serena Dimitri](name) office is
+    - do you know where Dr [Sean Westwood](name) office is
+    - do you know where Dr [Morgan Bailey](name) office is
+    - do you know where Dr [Radu Chirila](name) office is
+    - do you know where Dr [Jacqueline Borgstedt](name) office is
+    - do you know where Dr [Tobias Thejll-Madsen](name) office is
+    - do you know where Dr [Maria Vlachou](name) office is
+    - do you know where Dr [Casper Hyllested](name) office is
+    - do you know where Dr [Thomas Goodge](name) office is
+    - do you know where Dr [Christopher Chandler](name) office is
+    - do you know where Dr [Mary Roth](name) office is
+    - do you know where Dr [Rhiannon Fyfe](name) office is
+    - do you know where Dr [Emily O'Hara](name) office is
+    - do you know where Dr [Andrei Birladeanu](name) office is
+    - can you point me to Dr [Alessandro Vinciarelli](name) office
+    - can you point me to Dr [Monica Harvey](name) office
+    - can you point me to Dr [Stacy Marcela](name) office
+    - can you point me to Dr [Robin Bretin](name) office
+    - can you point me to Dr [Gordon Rennie](name) office
+    - can you point me to Dr [Andreas Drakopoulos](name) office
+    - can you point me to Dr [Serena Dimitri](name) office
+    - can you point me to Dr [Sean Westwood](name) office
+    - can you point me to Dr [Morgan Bailey](name) office
+    - can you point me to Dr [Radu Chirila](name) office
+    - can you point me to Dr [Jacqueline Borgstedt](name) office
+    - can you point me to Dr [Tobias Thejll-Madsen](name) office
+    - can you point me to Dr [Maria Vlachou](name) office
+    - can you point me to Dr [Casper Hyllested](name) office
+    - can you point me to Dr [Thomas Goodge](name) office
+    - can you point me to Dr [Christopher Chandler](name) office
+    - can you point me to Dr [Mary Roth](name) office
+    - can you point me to Dr [Rhiannon Fyfe](name) office
+    - can you point me to Dr [Emily O'Hara](name) office
+    - can you point me to Dr [Andrei Birladeanu](name) office
+    - where is Dr [Alessandro Vinciarelli](name)office
+    - where is Dr [Monica Harvey](name)office
+    - where is Dr [Stacy Marcela](name)office
+    - where is Dr [Robin Bretin](name)office
+    - where is Dr [Gordon Rennie](name)office
+    - where is Dr [Andreas Drakopoulos](name)office
+    - where is Dr [Serena Dimitri](name)office
+    - where is Dr [Sean Westwood](name)office
+    - where is Dr [Morgan Bailey](name)office
+    - where is Dr [Radu Chirila](name)office
+    - where is Dr [Jacqueline Borgstedt](name)office
+    - where is Dr [Tobias Thejll-Madsen](name)office
+    - where is Dr [Maria Vlachou](name)office
+    - where is Dr [Casper Hyllested](name)office
+    - where is Dr [Thomas Goodge](name)office
+    - where is Dr [Christopher Chandler](name)office
+    - where is Dr [Mary Roth](name)office
+    - where is Dr [Rhiannon Fyfe](name)office
+    - where is Dr [Emily O'Hara](name)office
+    - where is Dr [Andrei Birladeanu](name)office
+    - tell me where Dr [Alessandro Vinciarelli](name) office is
+    - tell me where Dr [Monica Harvey](name) office is
+    - tell me where Dr [Stacy Marcela](name) office is
+    - tell me where Dr [Robin Bretin](name) office is
+    - tell me where Dr [Gordon Rennie](name) office is
+    - tell me where Dr [Andreas Drakopoulos](name) office is
+    - tell me where Dr [Serena Dimitri](name) office is
+    - tell me where Dr [Sean Westwood](name) office is
+    - tell me where Dr [Morgan Bailey](name) office is
+    - tell me where Dr [Radu Chirila](name) office is
+    - tell me where Dr [Jacqueline Borgstedt](name) office is
+    - tell me where Dr [Tobias Thejll-Madsen](name) office is
+    - tell me where Dr [Maria Vlachou](name) office is
+    - tell me where Dr [Casper Hyllested](name) office is
+    - tell me where Dr [Thomas Goodge](name) office is
+    - tell me where Dr [Christopher Chandler](name) office is
+    - tell me where Dr [Mary Roth](name) office is
+    - tell me where Dr [Rhiannon Fyfe](name) office is
+    - tell me where Dr [Emily O'Hara](name) office is
+    - tell me where Dr [Andrei Birladeanu](name) office is
+    - how do I find Dr [Alessandro Vinciarelli](name) office
+    - how do I find Dr [Monica Harvey](name) office
+    - how do I find Dr [Stacy Marcela](name) office
+    - how do I find Dr [Robin Bretin](name) office
+    - how do I find Dr [Gordon Rennie](name) office
+    - how do I find Dr [Andreas Drakopoulos](name) office
+    - how do I find Dr [Serena Dimitri](name) office
+    - how do I find Dr [Sean Westwood](name) office
+    - how do I find Dr [Morgan Bailey](name) office
+    - how do I find Dr [Radu Chirila](name) office
+    - how do I find Dr [Jacqueline Borgstedt](name) office
+    - how do I find Dr [Tobias Thejll-Madsen](name) office
+    - how do I find Dr [Maria Vlachou](name) office
+    - how do I find Dr [Casper Hyllested](name) office
+    - how do I find Dr [Thomas Goodge](name) office
+    - how do I find Dr [Christopher Chandler](name) office
+    - how do I find Dr [Mary Roth](name) office
+    - how do I find Dr [Rhiannon Fyfe](name) office
+    - how do I find Dr [Emily O'Hara](name) office
+    - how do I find Dr [Andrei Birladeanu](name) office
+    - where can I find Dr [Alessandro Vinciarelli](name)office
+    - where can I find Dr [Monica Harvey](name)office
+    - where can I find Dr [Stacy Marcela](name)office
+    - where can I find Dr [Robin Bretin](name)office
+    - where can I find Dr [Gordon Rennie](name)office
+    - where can I find Dr [Andreas Drakopoulos](name)office
+    - where can I find Dr [Serena Dimitri](name)office
+    - where can I find Dr [Sean Westwood](name)office
+    - where can I find Dr [Morgan Bailey](name)office
+    - where can I find Dr [Radu Chirila](name)office
+    - where can I find Dr [Jacqueline Borgstedt](name)office
+    - where can I find Dr [Tobias Thejll-Madsen](name)office
+    - where can I find Dr [Maria Vlachou](name)office
+    - where can I find Dr [Casper Hyllested](name)office
+    - where can I find Dr [Thomas Goodge](name)office
+    - where can I find Dr [Christopher Chandler](name)office
+    - where can I find Dr [Mary Roth](name)office
+    - where can I find Dr [Rhiannon Fyfe](name)office
+    - where can I find Dr [Emily O'Hara](name)office
+    - where can I find Dr [Andrei Birladeanu](name)office
+    - can you help me find Dr [Alessandro Vinciarelli](name) office
+    - can you help me find Dr [Monica Harvey](name) office
+    - can you help me find Dr [Stacy Marcela](name) office
+    - can you help me find Dr [Robin Bretin](name) office
+    - can you help me find Dr [Gordon Rennie](name) office
+    - can you help me find Dr [Andreas Drakopoulos](name) office
+    - can you help me find Dr [Serena Dimitri](name) office
+    - can you help me find Dr [Sean Westwood](name) office
+    - can you help me find Dr [Morgan Bailey](name) office
+    - can you help me find Dr [Radu Chirila](name) office
+    - can you help me find Dr [Jacqueline Borgstedt](name) office
+    - can you help me find Dr [Tobias Thejll-Madsen](name) office
+    - can you help me find Dr [Maria Vlachou](name) office
+    - can you help me find Dr [Casper Hyllested](name) office
+    - can you help me find Dr [Thomas Goodge](name) office
+    - can you help me find Dr [Christopher Chandler](name) office
+    - can you help me find Dr [Mary Roth](name) office
+    - can you help me find Dr [Rhiannon Fyfe](name) office
+    - can you help me find Dr [Emily O'Hara](name) office
+    - can you help me find Dr [Andrei Birladeanu](name) office
+    - [Birladeanu]
+    - [Emily]
+    - [O'Hara]
+
+- intent: goodbye
+  examples: |
+    - Good afternoon
+    - Cu
+    - Good by
+    - See you later
+    - Good night
+    - Bye
+    - Goodbye
+    - Have a nice day
+    - See you around
+    - Bye bye
+    - See you later
+    - Take care
+    - Thanks bye
+    - See you
+
+
+- intent: greet
+  examples: |
+    - Hey
+    - Hello
+    - Hi
+    - Hello there
+    - Hi there
+    - Good morning
+    - Good evening
+    - Moin
+    - Hey there
+    - Let's go
+    - Hey dude
+    - Goodmorning
+    - Goodevening
+    - Good afternoon
+    - Hey pal
+    - Hi pal
+    - Hi bot
+    - Hey bot
+    - Nice to meet you
+
