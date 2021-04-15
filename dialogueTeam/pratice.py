@@ -11,21 +11,30 @@ import time
 import json
 import random 
 
-CDT_responses = ["We're a groupd of students who work at the intersection of AI and society",
-				 "It's a PHD program cross-discipline between computer science, psychology, neuroscience and a bunch of other things",
-				 "It's a group of students that are researching future technologies"]
+
+
+
+# Stitch into the sean's code, leave for Radu.
+
+
+
+CDT_responses = {
+	"one": ["We're a groupd of students who work at the intersection of AI and society", ["Talking2", "HeadNodLong", "Idle"]],
+	 "Two": ["It's a PHD program cross-discipline between computer science, psychology, neuroscience and a bunch of other things", ["Talking2", "HeadNodLong", "Idle"]],
+	 "Three":["It's a group of students that are researching future technologies", ["Talking2", "HeadNodLong", "Idle"]]
+	 }
 
 destinations = {
-	"toilet": "the toilet is on the ground floor just next to the coffee stand behind me.",
-	"office": "the office is on the second floor take a left when you get to the top of the stairs."
+	"toilet": ["the toilet is on the ground floor just next to the coffee stand behind me.", ["HeadNodYes", "PointUp", "Talking"]],
+	"office": ["the office is on the second floor take a left when you get to the top of the stairs.", ["HeadNodYes", "PointUp", "PointLeft"]]
 	}
 
 students = {
-	"gordon": "studies computational paralinguistics",
-	"serena": "studying brains in VR"
+	"gordon": ["studying computational paralinguistics", ["Talking1", "HeadNodLong"]],
+	"serena": ["studying brains in VR", ["Talking2", "HeadNodLong", "Idle"]]
 	}
 
-
+unsure = ["Idle", "Talking1", "Talking 2"]
 def generateDirections(destination):
 	directions = ""
 	try:
@@ -33,36 +42,50 @@ def generateDirections(destination):
 		keys = destinations.keys()
 		for key in keys:
 			if key == place:
-				directions = "I think you want to go to {DESTINATION}, {DIRECTIONS}".format(DESTINATION=place, DIRECTIONS=destinations[place])
+				directions = "I think you want to go to {DESTINATION}, {DIRECTIONS}".format(DESTINATION=place, DIRECTIONS=destinations[place][0])
+				behaviour = destinations[place][1]
+				payload = [directions, behaviour]
 		if directions == "":
 			directions = "I'm sorry, I don't know where the {FUCKING_THING} is".format(FUCKING_THING=place)
-			
+			behaviour = unsure
+			payload = [directions, behaviour]
 	except:
-		directions = "I'm not sure where you want to go. (give examples???)"
+		directions = "I'm not sure where you want to go."
+		behaviour = unsure
+		payload = [directions, behaviour]
 	
-	return directions
+	return payload
 
 
 def generateCDTtrivia(entities):
 	response = "Hello world"
-	#try:
-	Type = entities[0]["entity"]
+	try:
+		Type = entities[0]["entity"]
+		name = entities[0]["value"]
+	except:
+		name = "who you are asking about"
+		Type = ""
 	if Type == "name":
 		response = ""
 		keys = students.keys()
 		for key in keys:
 			if entities[0]["value"] == key:
-				name = entities[0]["value"]
+				
 				description = students[name]
-				response = "{NAME}, is {DESC}".format(NAME=name, DESC=description)
+				response = "{NAME}, is {DESC}".format(NAME=name, DESC=description[0])
+				behaviour = description[1]
+				payload = [response, behaviour]
 	if response == "":
 		response = "I'm sorry I don't know {NAME}, perhaps you could try rephrasing that".format(NAME=name)
+		behaviour = unsure
+		payload = [response, behaviour]
 	#except:
 	#	response = random.choice(CDT_responses)
-	return response
+	return payload
 
 
 def getReply(utterance, sender):
+	response = ""
 	payload = {"text": utterance}
 	content = requests.post(url='http://localhost:5005/model/parse', json=payload)
 	dataReturned = content.json()
@@ -80,6 +103,10 @@ def getReply(utterance, sender):
 		response = generateCDTtrivia(entities)
 	elif intent == "directions":
 		response = generateDirections(entities)
+	elif response == "":
+		payload = {"sender": sender, "message": utterance}
+		response = requests.post(url='http://localhost:5005/webhooks/rest/webhook', json=payload)
+		response = response.json()[0]["text"]
 	return response
 
 def runConversation():
