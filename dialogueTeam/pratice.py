@@ -107,6 +107,8 @@ def getReply(utterance, sender):
 		payload = {"sender": sender, "message": utterance}
 		response = requests.post(url='http://localhost:5005/webhooks/rest/webhook', json=payload)
 		response = response.json()[0]["text"]
+		behaviour = ["Talking1", "Talking2", "Idle"]
+		response = [response, behaviour]
 	return response
 
 def runConversation():
