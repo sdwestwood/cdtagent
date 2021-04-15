@@ -1,0 +1,35 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - directions
+  - cdtTrivia
+
+entities:
+  - destination
+  - name
+  - subject
+
+responses:
+  utter_greet:
+  - text: "Hey! what do you want?"
+
+  utter_over_there:
+  - text: "GIVE_DIRECTION"
+
+  utter_cdt:
+  - text: "CDT_TRIVIA"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
