@@ -93,13 +93,13 @@ try:
                 data = q.get()
                 if rec.AcceptWaveform(data):
                     
-                    fulltxt = rec.Result()
-                    tmp_chunk = getChunk(fulltxt)
-                    tmp_conf = getConf(fulltxt)
-                    tmp_dict = {tmp_chunk: tmp_conf}
-                    
-                    chunks.append(tmp_chunk)
-                    conf.append(tmp_conf)
+                    if len(fulltxt) > 17:
+                        tmp_chunk = getChunk(fulltxt)
+                        tmp_conf = getConf(fulltxt)
+                        tmp_dict = {tmp_chunk: tmp_conf}
+                        
+                        chunks.append(tmp_chunk)
+                        conf.append(tmp_conf)
 
                     print(fulltxt)         
                     
