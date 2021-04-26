@@ -1,0 +1,10 @@
+toilet
+loo
+bathroom
+office
+lab
+reception
+hall
+help desk
+stairs
+lift
