@@ -23,13 +23,14 @@ def callback(indata, frames, time, status):
         print(status, file=sys.stderr)
     q.put(bytes(indata))
     
-def getChunk(fulltxt):
+def getTurn(fulltxt):
     """Function to return the isolated chunk of text from rec.Result()"""
     result, text = fulltxt.split(']')
-    chunk = text[14:-3]
-    return chunk
+    turn = text[14:-3]
+    return turn
 
 def getConf(fulltxt):
+    """Function to return the confidence for each word in rec.Result()"""
     conf_idx = [a.end() for a in re.finditer('f" : ', fulltxt)]
     conf = [fulltxt[i:(i+8)] for i in conf_idx]
     return conf
@@ -87,20 +88,22 @@ try:
 
             rec = vosk.KaldiRecognizer(model, args.samplerate)
             
-            chunks = [];
-            conf = [];
+            turns = []
+            conf = []
             while True:
                 data = q.get()
                 if rec.AcceptWaveform(data):
                     
-                    if len(fulltxt) > 17:
-                        tmp_chunk = getChunk(fulltxt)
-                        tmp_conf = getConf(fulltxt)
-                        tmp_dict = {tmp_chunk: tmp_conf}
+                    fulltxt = rec.Result()
                         
-                        chunks.append(tmp_chunk)
+                    if len(fulltxt) > 17:
+                        tmp_turn = getTurn(fulltxt)
+                        tmp_conf = getConf(fulltxt)
+                        tmp_dict = {tmp_turn: tmp_conf}
+                        
+                        turns.append(tmp_turn)
                         conf.append(tmp_conf)
-
+                        
                     print(fulltxt)         
                     
                 else:
